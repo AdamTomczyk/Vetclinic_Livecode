@@ -1,0 +1,8 @@
+<h1 class="mt-4">Make Appointment for <%= @pet.name %></h1>
+
+
+<%= simple_form_for [@pet, @appointment] do |f| %>
+          <%= f.input :reason, placeholder: 'Enter the reason for the visit' %>
+          <%= f.association :doctor, prompt: "Select a doctor", collection: Doctor.where(available: true), input_html: {data: { controller: "tom-select"}} %>
+          <%= f.submit class: "apt-btn" %>
+  <% end %>

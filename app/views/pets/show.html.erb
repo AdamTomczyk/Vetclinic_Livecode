@@ -1,0 +1,17 @@
+<div class="info-visual-container mt-3">
+  <h1 class="display-1"><%= @pet.name %></h1>
+  <div class="img-container-show" style="background-color: <%= @pet.set_background %>">
+      <%= image_tag @pet.create_icon %>
+    </div>
+</div>
+<h2 class="display-4 show-species-text mb-5"><%= @pet.species.capitalize %></h2>
+<%= link_to "Create appointment", new_pet_appointment_path(@pet), class: "apt-btn" %>
+
+
+<h2 class="mt-5">Appoinments</h2>
+
+<div class="grid">
+  <% @pet.appointments.each do |appointment| %>
+    <%= render "appointmentcard", appointment: appointment %>
+  <% end %>
+</div>

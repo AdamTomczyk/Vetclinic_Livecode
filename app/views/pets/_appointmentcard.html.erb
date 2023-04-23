@@ -1,0 +1,12 @@
+<div class="petcard mt-3 hvr-grow">
+  <h5 class="mt-2">Reason</h5>
+  <h6><%= appointment.reason %></h6>
+
+
+  <h5 class="mt-2">Date</h5>
+  <h6><%= appointment.created_at.strftime("%Y-%m-%d") %></h6>
+
+  <h5 class="mt-2">Doctor</h5>
+  <h6><%= appointment.doctor.name %></h6>
+
+</div>

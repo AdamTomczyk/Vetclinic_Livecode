@@ -1,0 +1,14 @@
+<div class="petcard mt-3 hvr-grow">
+
+  <div class="img-container" style="background-color: <%= pet.set_background %>">
+    <%= image_tag pet.create_icon %>
+  </div>
+  <h5 class="mt-2">Name</h5>
+  <h6><%= pet.name %></h6>
+
+  <h5 class="mt-2">Species</h5>
+  <h6><%= pet.species.capitalize %></h6>
+
+  <%= link_to "More", pet_path(pet), class: "more-btn" %>
+
+</div>
